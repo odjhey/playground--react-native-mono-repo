@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/@expo-google-fonts/space-grotesk",
+      "**/@expo/webpack-config",
+      "**/@react-native-async-storage/async-storage",
+      "**/@react-navigation/bottom-tabs",
+      "**/@react-navigation/native",
+      "**/@react-navigation/native-stack",
+      "**/@react-navigation/stack",
+      "**/expo",
+      "**/expo-application",
+      "**/expo-constants",
+      "**/expo-device",
+      "**/expo-file-system",
+      "**/expo-font",
+      "**/expo-linear-gradient",
+      "**/expo-localization",
+      "**/expo-modules-core",
+      "**/expo-splash-screen",
+      "**/expo-status-bar",
+      "**/react",
+      "**/react-native",
+      "**/react-native-bootsplash",
+      "**/react-native-gesture-handler",
+      "**/react-native-reanimated",
+      "**/react-native-safe-area-context",
+      "**/react-native-screens",
+      "**/reactotron-mst",
+      "**/reactotron-react-js",
+      "**/reactotron-react-native",
+      "**/react-native-gradle-plugin"
+    ]
+  }
+}

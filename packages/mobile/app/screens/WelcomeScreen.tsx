@@ -14,7 +14,11 @@ const welcomeFace = require("../../assets/images/welcome-face.png")
 type WelcomeScreenProps = unknown
 export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeScreen() {
   const store = useStores()
-  // store.core.raws.queryOutlets()
+  // why is this doing an unli rerender, grrrr
+  // const { loading } = store.core.raws.queryOutlets({}, undefined, { fetchPolicy: "no-cache" })
+
+  store.core.raws.queryOutlets({}, undefined, { fetchPolicy: "no-cache" })
+  console.log(new Date().toISOString())
 
   return (
     <View style={$container}>

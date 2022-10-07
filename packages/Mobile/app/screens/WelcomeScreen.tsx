@@ -1,21 +1,18 @@
 import { observer } from "mobx-react-lite"
-import React, {
-  FC,
-} from "react"
+import React, { FC } from "react"
 import { Image, ImageStyle, TextStyle, View, ViewStyle } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
-import {
-  Text,
-} from "../components"
+import { Text } from "../components"
 import { isRTL } from "../i18n"
 import { colors, spacing } from "../theme"
+import { hello } from "shared"
+import { useStores } from "../models"
 
 const welcomeLogo = require("../../assets/images/logo.png")
 const welcomeFace = require("../../assets/images/welcome-face.png")
 
-
-export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeScreen(
-) {
+export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeScreen() {
+  const store = useStores()
 
   return (
     <View style={$container}>
@@ -34,6 +31,8 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
       <SafeAreaView style={$bottomContainer} edges={["bottom"]}>
         <View style={$bottomContentContainer}>
           <Text tx="welcomeScreen.postscript" size="md" />
+          <Text>{hello()}</Text>
+          <Text>{store.core.value}</Text>
         </View>
       </SafeAreaView>
     </View>

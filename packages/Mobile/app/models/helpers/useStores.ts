@@ -15,7 +15,10 @@ import { setupRootStore } from "./setupRootStore"
  * very large), you may want to use a different strategy than immediately
  * instantiating it, although that should be rare.
  */
-const _rootStore = RootStoreModel.create({})
+const _rootStore = RootStoreModel.create({
+  core: { value: "dagnabit" },
+  a: "",
+})
 
 /**
  * The RootStoreContext provides a way to access

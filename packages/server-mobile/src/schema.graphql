@@ -1,0 +1,8 @@
+type Query {
+  hello: String!
+  outlets: [Outlet!]!
+}
+type Outlet {
+  id: ID!
+  name: String!
+}

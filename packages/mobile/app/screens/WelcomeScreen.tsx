@@ -11,8 +11,10 @@ import { useStores } from "../models"
 const welcomeLogo = require("../../assets/images/logo.png")
 const welcomeFace = require("../../assets/images/welcome-face.png")
 
+type WelcomeScreenProps = unknown
 export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeScreen() {
   const store = useStores()
+  // store.core.raws.queryOutlets()
 
   return (
     <View style={$container}>
@@ -33,6 +35,7 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
           <Text tx="welcomeScreen.postscript" size="md" />
           <Text>{hello()}</Text>
           <Text>{store.core.value}</Text>
+          <Text>{JSON.stringify(store.core.raws.outlets)}</Text>
         </View>
       </SafeAreaView>
     </View>

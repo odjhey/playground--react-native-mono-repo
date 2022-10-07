@@ -1,10 +1,12 @@
 import { types, Instance } from "mobx-state-tree";
+import { RootStore } from "./models";
 
 export const StoreModel = types
   .model("Store", {
     value: types.string,
+    raws: RootStore,
   })
-  .actions((self) => {
+  .actions((_self) => {
     return {};
   });
 

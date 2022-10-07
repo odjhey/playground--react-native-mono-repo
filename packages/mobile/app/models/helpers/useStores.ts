@@ -16,7 +16,10 @@ import { setupRootStore } from "./setupRootStore"
  * instantiating it, although that should be rare.
  */
 const _rootStore = RootStoreModel.create({
-  core: { value: "dagnabit" },
+  core: {
+    value: "dagnabit",
+    raws: {},
+  },
   a: "",
 })
 
